@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Science+Gothic:wght@100..900&display=swap');
+/* ===============================================
+       CSS RESET & BASE STYLES
+=============================================== */
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+:root {
+     /* Colors */ 
+     --color-blue: #00539a;
+     --color-green: #37bd79;
+     --color-ltblue: #308fac;
+     --color-white: #FFFFFF;
+     --color-dark: #1A2B45;
+     --color-red: #BD377B;
+
+     /* Outlines */
+     --outline:
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
+
+     --outline-bold:
+    -2px -2px 0 #000,  
+     2px -2px 0 #000,
+    -2px  2px 0 #000,
+     2px  2px 0 #000;
+
+     --outline-white:
+    -2px -2px 0 #FFFFFF,  
+     2px -2px 0 #FFFFFF,
+    -2px  2px 0 #FFFFFF,
+     2px  2px 0 #FFFFFF;
+
+     /* Topography */
+     --font-main: Asap, Garamond, serif;
+     --font-bold: 'Science Gothic', Arial, sans-serif;
+     --font-reg: 'Cantarell', Arial, sans-serif;
+}
+
+body {
+     font-family: var(--font-main);
+     color: var(--color-dark);
+     line-height: 1.6;
+}
+
+/* NAV BAR */
+/* Later for phones, make it so the logo is on top and links are below it*/
+header {
+     background-color: var(--color-blue);
+     position: sticky;
+     top: 0;
+     left: 0;
+     z-index: 100;
+     box-shadow: 10px 10px 40px rgb(0, 92, 184);
+}
+
+.main-nav {
+     display: flex;
+     justify-content: space-between; /* Logo Left, nav right */
+     align-items: center; /* vertically centered */
+     padding: 1rem 2rem;
+     max-width: 1500px;
+     margin: 0 auto;
+     font-family: var(--font-bold);
+}
+
+.nav-logo {
+     font-size: 1.3rem;
+     font-weight: bold;
+     color: var(--color-white);
+     text-decoration: none;
+     text-shadow: var(--outline-bold);
+}
+
+.nav-links {
+     list-style: none;
+     display: flex;
+     justify-content: space-evenly;
+     gap: 3rem; /* Change for phones later */
+     margin-left: 0.4rem;
+}
+
+.nav-links a {
+     color: var(--color-white);
+     text-shadow: var(--outline);
+     text-decoration: none;
+     font-size: 1rem;
+     transition: color 0.2s;
+}
+
+.nav-links a:hover {
+     color: var(--color-ltblue);
+}
+
+/* Hero */
+#hero {
+     background-image: url('../images/threeGuardians2.png');
+     background-size: cover;
+     position: relative;
+     background-position: center;
+     min-height: 100vh;
+     font-family: var(--color-bold);
+     overflow: hidden;
+}
+
+/* Dark overlay on the hero image for text readability */
+#hero::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: rgba(0, 51, 102, 0.75);
+}
+
+.hero-content {
+     position: relative;
+     text-align: center;
+     color: var(--color-white);
+     z-index: 1;
+     margin: 1rem;
+     /* padding: 2rem; */
+     padding-top: 10rem;
+}
+.hero-content h1 {
+     font-size: 3.5rem;
+     margin-bottom: 0.3rem;
+     font-family: var(--font-bold);
+     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content h2 {
+     font-size: 1.8rem;
+     margin-bottom: 0.5rem;
+     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.hero-block {
+    display: inline-block;
+    background-color: rgba(0, 51, 102, 0.75);
+    border: 2px solid var(--color-ltblue);
+    border-radius: 1rem;
+    margin: 1rem;
+    padding: 1rem 2rem;
+}
+
+.hero-content p {
+     align-self: flex-start;
+     text-wrap: wrap;
+     font-size: 1.4rem;
+     color: var(--color-gold);
+     margin-bottom: 1.5rem;
+     max-width: 650px;
+     text-align: left;
+}
+
+.hero-btn {
+    margin-bottom: 1rem;
+    justify-content: space-between;
+}
+
+.btn {
+    font-family: var(--font-bold);
+     width: 300px;
+     display: inline-block;
+     background-color: rgba(0, 128, 255, 0.35);
+     color: var(--color-dark);
+     border: 2px solid var(--color-dark);
+     padding: 0.8rem 2rem;
+     border-radius: 4px;
+     text-decoration: none;
+     font-weight: bold;
+     font-size: 1.1rem;
+     transition: background-color 0.5s;
+     margin-left: 1rem;
+     margin-bottom: 0.6rem;
+}
+
+.btn:hover {
+     background-color: var(--color-ltblue);
+     transform: translateY(-4px);
+     box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
+}
