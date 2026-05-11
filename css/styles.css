@@ -271,8 +271,11 @@ header {
 .cia-cards h3 {
      font-size: 0.95rem;
      font-style: italic;
-     margin-bottom: 0.3rem;
+     margin-bottom: 1rem;
+     padding-bottom: 0.8rem;
      font-family: var(--font-reg);
+     border-bottom: 2px solid var(--color-dark-green);
+
 }
 
 .cia-card-p p {
@@ -283,21 +286,19 @@ header {
      margin-top: 1.5rem; /* Make bigger when on computer when doing view port crap */
      padding-left: 1rem;
      padding-right: 1rem;
-     border-left: 4px solid var(--color-blue);
-     border-radius: 0.2rem;
-     background-color: rgba(60, 200, 255, 0.8);
+     border-left: 4px solid var(--color-dark-green);
+     background-color: rgba(60, 255, 209, 0.5);
      padding-bottom: 1rem;
      margin-bottom: 1.2rem;
-     box-shadow: 5px 5px 2.5px rgba(60, 200, 255, 0.3);
      min-height: 160px;
 }
 
 .cia-card-highlight h3 {
-     font-family: var(--font-bold);
+     border-bottom: none;
+     font-family: var(--font-reg);
      padding-top: 0.3rem;
      margin-bottom: 0rem;
-     font-size: 1.4rem;
-     text-shadow: var(--outline-half-blue);
+     font-size: 1.8rem;
 }
 
 .cia-card-highlight p {
@@ -311,7 +312,7 @@ header {
      background-color: rgba(112, 255, 169, 0.8);
      padding: 1rem;
      padding-top: 1.4rem;
-     border: 5px dashed var(--color-dark-green);
+     border: px solid var(--color-dark-green);
      box-shadow: 10px 10px 5px rgba(134, 254, 182, 0.1);
      max-height: 1000px;
 }
@@ -322,18 +323,18 @@ header {
 }
 
 .cia-footer {
-     background-color: rgba(54, 134, 213, 0.85);
+     background-color: rgba(112, 255, 169, 0.8);
      padding: 1rem;
      margin: 1rem 3rem;
      font-size: 1.1rem;
-     border-top: 5px solid var(--color-blue);
+     border-top: 5px solid var(--color-dark-green);
      border-radius: 0.3rem;
      box-shadow: 10px 10px 5px rgba(134, 184, 254, 0.1);
 }
 
 .cia-footer strong {
-     font-size: 1.2rem;
-     font-family: var(--font-bold);
+     font-size: 1.5rem;
+     font-family: var(--font-reg);
 }
 
 
@@ -394,11 +395,16 @@ header {
 
 .data-card-ex {
      font-size: 1.3rem;
-     padding-top: 1rem;
+     margin-top: 0.4rem;
+     margin-bottom: 0.4rem;
+     border-left: 4px solid var(--color-blue);
+     padding-top: 0.4rem;
+     padding-bottom: 0.4rem;
      font-family: var(--font-reg);
      padding-left: 1rem;
      padding-right: 1rem;
      color: var(--color-white);
+     background-color: rgba(60, 161, 255, 0.5);
 }
 
 
@@ -407,7 +413,6 @@ header {
      padding: 1rem;
      padding-top: 1.4rem;
      border: 3px solid var(--color-blue);
-     border-radius: 2.2rem 0 0 0;
      box-shadow: 10px 10px 5px rgba(134, 194, 254, 0.1);
      max-height: 1000px;
 }
@@ -423,7 +428,6 @@ header {
      padding: 2rem;
      padding-top: 1.4rem;
      border: 3px solid var(--color-blue);
-     border-radius: 2.2rem 0 0 0;
      box-shadow: 10px 10px 5px rgba(134, 194, 254, 0.1);
      max-height: 1000px;
      margin: 3rem;
