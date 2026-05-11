@@ -42,53 +42,97 @@
                 <h2>The CIA Framework</h2>
                 <p>Data is a valuable asset. The primary goal of cybersecurity is to maintain three critical properties — collectively known as the CIA Triad — for all data, all the time.</p>
             </div>
-            <section class="cia-cards">
-                <div class="cia-card">
-                    <h2>Confidentiality</h2>
-                    <h3>"Data is not revealed"</h3>
-                    <div class="cia-card-p">
-                        <p>Protection against unauthorized access. Only those with proper permission should ever be able to read or view the data.</p>
-                        <p>Think of it as a locked diary — only the owner (or those granted access) can read it.</p>
+            <div class="cia-body parallax-image parallax-image-1">
+                <section class="cia-cards">
+                    <div class="cia-card">
+                        <h2>Confidentiality</h2>
+                        <h3>"Data is not revealed"</h3>
+                        <div class="cia-card-p">
+                            <p>Protection against unauthorized access. Only those with proper permission should ever be able to read or view the data.</p>
+                            <p>Think of it as a locked diary — only the owner (or those granted access) can read it.</p>
+                        </div>
+                        <div class="cia-card-highlight">
+                            <h3>REAL-WORLD BREACH</h3>
+                            <p>Edward Snowden's 2013 leak of classified NSA government data is a landmark example of a Confidentiality breach.</p>
+                        </div>
                     </div>
-                    <div class="cia-card-highlight">
-                        <h3>REAL-WORLD BREACH</h3>
-                        <p>Edward Snowden's 2013 leak of classified NSA government data is a landmark example of a Confidentiality breach.</p>
-                    </div>
-                </div>
 
 
-                <div class="cia-card">
-                    <h2>Integrity</h2>
-                    <h3>"Data is intact - not modified or corrupted"</h3>
-                    <div class="cia-card-p">
-                        <p>Protection against unauthorized modification. Data must remain accurate and trustworthy from the moment it is created until it is accessed.</p>
-                        <p>If someone changes your grade in the grade book without permission, that's an Integrity breach.</p>
+                    <div class="cia-card">
+                        <h2>Integrity</h2>
+                        <h3>"Data is intact - not modified or corrupted"</h3>
+                        <div class="cia-card-p">
+                            <p>Protection against unauthorized modification. Data must remain accurate and trustworthy from the moment it is created until it is accessed.</p>
+                            <p>If someone changes your grade in the grade book without permission, that's an Integrity breach.</p>
+                        </div>
+                        <div class="cia-card-highlight">
+                            <h3>REAL-WORLD BREACH</h3>
+                            <p>The Stuxnet worm secretly altered code on Iranian centrifuge machines, causing them to spin too fast and physically break — a classic Integrity attack.</p>
+                        </div>
                     </div>
-                    <div class="cia-card-highlight">
-                        <h3>REAL-WORLD BREACH</h3>
-                        <p>The Stuxnet worm secretly altered code on Iranian centrifuge machines, causing them to spin too fast and physically break — a classic Integrity attack.</p>
-                    </div>
-                </div>
 
 
-                <div class="cia-card">
-                    <h2>Availability</h2>
-                    <h3>"Data is accessible to allowed users"</h3>
-                    <div class="cia-card-p">
-                        <p>Protection against denial of service. Authorized users must be able to access data and systems whenever they legitimately need them.</p>
-                        <p>A website that is always down, or an account that stays locked, fails the Availability test.</p>
+                    <div class="cia-card">
+                        <h2>Availability</h2>
+                        <h3>"Data is accessible to allowed users"</h3>
+                        <div class="cia-card-p">
+                            <p>Protection against denial of service. Authorized users must be able to access data and systems whenever they legitimately need them.</p>
+                            <p>A website that is always down, or an account that stays locked, fails the Availability test.</p>
+                        </div>
+                        <div class="cia-card-highlight">
+                            <h3>REAL-WORLD BREACH</h3>
+                            <p>The Mirai Botnet used 145,000+ infected cameras and devices to flood security journalist Brian Krebs' website with traffic, crashing it for 4 days — a textbook DDoS / Availability breach.</p>
+                        </div>
                     </div>
-                    <div class="cia-card-highlight">
-                        <h3>REAL-WORLD BREACH</h3>
-                        <p>The Mirai Botnet used 145,000+ infected cameras and devices to flood security journalist Brian Krebs' website with traffic, crashing it for 4 days — a textbook DDoS / Availability breach.</p>
+                </section>
+                <section class="cia-footer">
+                    <p><strong> Formula: Protection = Prevention + (Detection Response). </strong> <br> Every cybersecurity technique fits into at least one of these three elements, and every element maps back to the CIA Triad.</p>
+                </section>
+            </div>
+        </section>
+        <section id="data" class="data">
+            <div class="data-head">
+                <h3>Protecting Data</h3>
+                <h2>The Three States of Data</h2>
+                <p>To choose the right security tool, you need to know what state data is currently in. Data exists in one of three states at any given moment.</p>
+            </div>
+            <div class="data-body parallax-image parallax-image-2">
+                <section class="data-cards">
+                    <div class="data-card">
+                        <h2>Data at Rest</h2>
+                        <div class="data-card-p">
+                            <p>Information stored on hard drives, USB drives, DVDs, or memory — sitting still and not currently being moved or processed.</p>
+                        </div>
+                        <div class="data-card-ex">
+                            <p>Example: Saved files on your laptop's hard drive.</p>
+                        </div>
                     </div>
-                </div>
-            </section>
-            <section class="cia-footer">
-                <p><strong> Formula: Protection = Prevention + (Detection Response). </strong> <br> Every cybersecurity technique fits into at least one of these three elements, and every element maps back to the CIA Triad.</p>
-            </section>
+
+                    <div class="data-card">
+                        <h2>Data in Transit</h2>
+                        <div class="data-card-p">
+                            <p>Data actively moving from one system to another — through a network, the internet, or a local file share connection.</p>
+                        </div>
+                        <div class="data-card-ex">
+                            <p>Example: Sending an email or uploading a file to the cloud.</p>
+                        </div>
+                    </div>
+
+                    <div class="data-card">
+                        <h2>Data in Use</h2>
+                        <div class="data-card-p">
+                            <p>Data currently being processed by an application, held in active RAM, or being created/edited by a user right now.</p>
+                        </div>
+                        <div class="data-card-ex">
+                            <p>Example: A Word document you have open, or app data loaded in memory.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="data-footer">
+                    <p>Different tools protect different states: <strong>Encryption</strong> for data at rest, <strong>secure protocols (HTTPS/TLS)</strong> for data in transit, and <strong>access controls &amp; authentication</strong> for data in use.</p>
+                </section>
+            </div>
         </section>
     </main>
-
 </body>
 </html>

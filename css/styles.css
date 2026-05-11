@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Science+Gothic:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Iceberg&family=Science+Gothic:wght@100..900&display=swap');
+
 /* ===============================================
        CSS RESET & BASE STYLES
 =============================================== */
@@ -32,11 +33,23 @@
     -2px  2px 0 #000,
      2px  2px 0 #000;
 
+     --outline-half-bold:
+    -0px -0px 0 #000,  
+     0px -0px 0 #000,
+    -2px  2px 0 #000,
+     2px  2px 0 #000;
+
      --outline-white:
     -2px -2px 0 #FFFFFF,  
      2px -2px 0 #FFFFFF,
     -2px  2px 0 #FFFFFF,
      2px  2px 0 #FFFFFF;
+
+      --outline-half-white:
+    -0px -0px 0 #ffffff,  
+     0px -0px 0 #ffffff,
+    -2px  2px 0 #ffffff,
+     2px  2px 0 #ffffff;
 
      --outline-half-green:
     -0px -0px 0 #52e89d,  
@@ -53,7 +66,7 @@
      /* Topography */
      --font-main: Asap, Garamond, serif;
      --font-bold: 'Science Gothic', Arial, sans-serif;
-     --font-reg: 'Cantarell', Arial, sans-serif;
+     --font-reg: Iceberg, Arial, sans-serif;
 }
 
 body {
@@ -142,11 +155,12 @@ header {
      color: var(--color-white);
      z-index: 1;
      margin: 1rem;
+     padding: 1rem;
      /* padding: 2rem; */
      padding-top: 7rem;
 }
 .hero-content h1 {
-     font-size: 3.5rem;
+     font-size: 3rem;
      margin-bottom: 0.3rem;
      font-family: var(--font-bold);
      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
@@ -288,16 +302,16 @@ header {
 
 .cia-card-highlight p {
      font-family: var(--font-reg);
+     font-size: 1.1rem;
      padding-left: 0.8rem;
 }
 
 
 .cia-card {
-     background-color: rgb(112, 255, 169);
+     background-color: rgba(112, 255, 169, 0.8);
      padding: 1rem;
      padding-top: 1.4rem;
-     border-top: 5px solid var(--color-dark-green);
-     border-radius: 0.3rem;
+     border: 5px dashed var(--color-dark-green);
      box-shadow: 10px 10px 5px rgba(134, 254, 182, 0.1);
      max-height: 1000px;
 }
@@ -308,16 +322,163 @@ header {
 }
 
 .cia-footer {
-     background-color: rgba(0, 92, 184, 0.55);
+     background-color: rgba(54, 134, 213, 0.85);
      padding: 1rem;
      margin: 1rem 3rem;
      font-size: 1.1rem;
      border-top: 5px solid var(--color-blue);
      border-radius: 0.3rem;
-     box-shadow: 10px 10px 5px rgba(134, 254, 182, 0.1);
+     box-shadow: 10px 10px 5px rgba(134, 184, 254, 0.1);
 }
 
 .cia-footer strong {
      font-size: 1.2rem;
      font-family: var(--font-bold);
+}
+
+
+
+/* Data */
+
+.data {
+     padding-top: 1rem;
+     background-color: var(--color-ltblue);
+     position: relative;
+}
+
+.data-head {
+     padding: 1rem 7rem;
+     text-align: left;
+     border-top: 2px dotted var(--color-dark);
+}
+
+.data-head h2 {
+     text-shadow: var(--outline-bold);
+     color: var(--color-white);
+     font-family: var(--font-bold);
+     font-size: 2.5rem;
+}
+
+.data-head h3 {
+     text-shadow: var(--outline-bold);
+     color: var(--color-white);
+     font-family: var(--font-bold);
+     font-size: 0.8;
+}
+
+.data-head p {
+     font-family: var(--font-main);
+     padding-left: 1rem;
+     color: var(--color-white);
+     border-left: 2px solid var(--color-blue);
+     max-width: 800px;
+}
+
+.data-cards {
+     gap: 1rem;
+     margin: 3rem 3rem;
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.data-cards h2 {
+     text-align: center;
+     font-size: 1.7rem;
+     font-family: var(--font-bold);
+     color: var(--color-white);
+     border-bottom: 2px solid var(--color-blue);
+     margin-bottom: 1.1rem;
+     padding-bottom: 0.6rem;
+     font-style: italic;
+}
+
+.data-card-ex {
+     font-size: 1.3rem;
+     padding-top: 1rem;
+     font-family: var(--font-reg);
+     padding-left: 1rem;
+     padding-right: 1rem;
+     color: var(--color-white);
+}
+
+
+.data-card {
+     background-color: rgba(112, 179, 255, 0.8);
+     padding: 1rem;
+     padding-top: 1.4rem;
+     border: 3px solid var(--color-blue);
+     border-radius: 2.2rem 0 0 0;
+     box-shadow: 10px 10px 5px rgba(134, 194, 254, 0.1);
+     max-height: 1000px;
+}
+
+
+.data-card:hover {
+     transform: translateY(3px);
+     box-shadow: 10px 10px 5px rgba(134, 194, 254, 0.3);
+}
+
+.data-footer {
+     background-color: rgba(112, 179, 255, 0.8);
+     padding: 2rem;
+     padding-top: 1.4rem;
+     border: 3px solid var(--color-blue);
+     border-radius: 2.2rem 0 0 0;
+     box-shadow: 10px 10px 5px rgba(134, 194, 254, 0.1);
+     max-height: 1000px;
+     margin: 3rem;
+     font-size: 1.1rem;
+     color: var(--color-dark);
+}
+
+.data-footer strong {
+     font-size: 1.2rem;
+     font-family: var(--font-reg);
+}
+
+
+
+
+
+.parallax-image-1 {
+     background-image: url('../images/cia1.png');
+}
+
+.parallax-image-2 {
+     background-image: url('../images/cia2.png');
+}
+.parallax-image {
+     z-index: 0;
+     background-size: cover;
+     background-attachment: fixed;
+     background-repeat: no-repeat;
+     position: relative;
+     background-position: center;
+     min-height: 50vh;
+     font-family: var(--color-bold);
+     overflow: hidden;
+     padding-bottom: 4rem;
+     border-bottom:  2px solid var(--color-dark-green);;
+}
+
+.parallax-image-1::before {
+     z-index: -100;
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: rgba(10, 102, 0, 0.55);
+}
+
+.parallax-image-2::before {
+     z-index: -100;
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: rgba(0, 46, 102, 0.55);
 }
