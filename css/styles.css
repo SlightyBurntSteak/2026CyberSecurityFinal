@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Iceberg&family=Science+Gothic:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Iceberg&family=Notable&family=Science+Gothic:wght@100..900&display=swap');
 
 /* ===============================================
        CSS RESET & BASE STYLES
@@ -19,6 +19,7 @@
      --color-white: #FFFFFF;
      --color-dark: #1A2B45;
      --color-red: #BD377B;
+     --color-yellow: #f4e604;
 
      /* Outlines */
      --outline:
@@ -63,10 +64,23 @@
     -2px  2px 0 #64aeef,
      2px  2px 0 #64aeef;
 
+     --outline-half-dark-blue:
+    -0px -0px 0 #26435d,  
+     0px -0px 0 #26435d,
+    -2px  2px 0 #26435d,
+     2px  2px 0 #26435d;
+
+     --outline-half-dark-green:
+    -0px -0px 0 #265d2a,  
+     0px -0px 0 #265d2a,  
+    -2px  2px 0 #265d2a,  
+     2px  2px 0 #265d2a;
+
      /* Topography */
      --font-main: Asap, Garamond, serif;
      --font-bold: 'Science Gothic', Arial, sans-serif;
      --font-reg: Iceberg, Arial, sans-serif;
+     --font-loud: Notable, sans-serif;
 }
 
 body {
@@ -80,7 +94,7 @@ body {
 /* Later for phones, make it so the logo is on top and links are below it*/
 header {
      border: 2px solid var(--color-ltblue);
-     background-color: rgba(0, 92, 184, 0.35);
+     background-color: rgba(0, 92, 184, 0.75);
      position: sticky;
      top: 0;
      left: 0;
@@ -327,8 +341,6 @@ header {
      padding: 1rem;
      margin: 1rem 3rem;
      font-size: 1.1rem;
-     border-top: 5px solid var(--color-dark-green);
-     border-radius: 0.3rem;
      box-shadow: 10px 10px 5px rgba(134, 184, 254, 0.1);
 }
 
@@ -371,7 +383,7 @@ header {
      font-family: var(--font-main);
      padding-left: 1rem;
      color: var(--color-white);
-     border-left: 2px solid var(--color-blue);
+     border-left: 2px solid var(--color-green);
      max-width: 800px;
 }
 
@@ -412,7 +424,6 @@ header {
      background-color: rgba(112, 179, 255, 0.8);
      padding: 1rem;
      padding-top: 1.4rem;
-     border: 3px solid var(--color-blue);
      box-shadow: 10px 10px 5px rgba(134, 194, 254, 0.1);
      max-height: 1000px;
 }
@@ -427,7 +438,6 @@ header {
      background-color: rgba(112, 179, 255, 0.8);
      padding: 2rem;
      padding-top: 1.4rem;
-     border: 3px solid var(--color-blue);
      box-shadow: 10px 10px 5px rgba(134, 194, 254, 0.1);
      max-height: 1000px;
      margin: 3rem;
@@ -440,17 +450,220 @@ header {
      font-family: var(--font-reg);
 }
 
+/* aaa */
+
+.aaa {
+     padding-top: 1rem;
+     padding-bottom: 3rem;
+     background-color: var(--color-dark-green);
+     position: relative;
+}
+
+.aaa-head {
+     padding: 1rem 7rem;
+     text-align: left;
+     border-top: 2px dotted var(--color-dark);
+}
+
+.aaa-head h2 {
+     color: var(--color-dark);
+     font-family: var(--font-bold);
+     font-size: 2.5rem;
+}
+
+.aaa-head h3 {
+     color: var(--color-dark);
+     font-family: var(--font-bold);
+     font-size: 0.8;
+}
+
+.aaa-head p {
+     font-family: var(--font-main);
+     padding-left: 1rem;
+     color: var(--color-dark);
+     border-left: 2px solid var(--color-blue);
+     max-width: 500px;
+     font-size: 1.2rem;
+}
+
+
+.aaa-cards {
+     gap: 1rem;
+     margin: 3rem 3rem;
+     margin-bottom: 0rem;
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.aaa-cards h2 {
+     font-size: 1.7rem;
+     font-family: var(--font-bold);
+     color: var(--color-dark);
+     border-bottom: 2px solid var(--color-dark-green);
+     margin-bottom: 1.1rem;
+     padding-bottom: 0.6rem;
+}
+
+.aaa-cards h4 {
+     padding-left: 1.1rem;
+     font-size: 4rem;
+     font-family: var(--font-loud);
+     color: var(--color-dark);
+     text-shadow: var(--outline-half-green);
+}
+
+
+.aaa-card {
+     background-color: rgba(112, 255, 169, 0.8);
+     padding: 1rem;
+     padding-top: 1rem;
+     box-shadow: 10px 10px 5px rgba(134, 194, 254, 0.1);
+     max-height: 1000px;
+}
+
+
+.aaa-card:hover {
+     transform: translateY(3px);
+     box-shadow: 10px 10px 5px rgba(134, 254, 196, 0.3);
+}
+
+.aaa-footer {
+     background-color: rgba(112, 255, 169, 0.8);
+     padding: 2rem;
+     padding-top: 1.4rem;
+     box-shadow: 10px 10px 5px rgba(134, 194, 254, 0.1);
+     max-height: 1000px;
+     margin: 3rem;
+     margin-left: 5rem;
+     margin-right: 5rem;
+     color: var(--color-dark);
+     margin-bottom: 0rem;
+}
+
+.aaa-footer h2 {
+     border-bottom: 2px solid var(--color-dark-green);
+     font-size: 2rem;
+     font-family: var(--font-reg);
+     margin-bottom: 0.5rem;
+}
+
+.aaa-footer h2 strong {
+     padding-right: 0.6rem;
+     font-size: 2.5rem;
+     font-family: var(--font-loud);
+}
+
+.aaa-footer ul {
+     font-family: var(--font-reg);
+     margin-left: 1rem;
+     font-size: 1.2rem;
+}
+
+
+/* Passwords */
+
+.passwords {
+     padding-top: 1rem;
+     background-color: var(--color-blue);
+     position: relative;
+}
+
+.pass-attacks .pass-head {
+     padding: 1rem 7rem;
+     text-align: left;
+     border-top: 2px dotted var(--color-dark);
+}
+
+.pass-attacks .pass-head h2 {
+     text-shadow: var(--outline-bold);
+     color: var(--color-white);
+     font-family: var(--font-bold);
+     font-size: 2.5rem;
+}
+
+.pass-attacks .pass-head h3 {
+     text-shadow: var(--outline-bold);
+     color: var(--color-white);
+     font-family: var(--font-bold);
+     font-size: 0.8;
+}
+
+.pass-attacks .pass-head p {
+     font-family: var(--font-main);
+     padding-left: 1rem;
+     color: var(--color-white);
+     border-left: 2px solid var(--color-green);
+     max-width: 800px;
+}
+
+
+.pass-cards {
+     gap: 1rem;
+     margin: 3rem 3rem;
+     margin-bottom: 0rem;
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.pass-cards h2 {
+     text-align: center;
+     font-size: 1.7rem;
+     font-family: var(--font-bold);
+     color: var(--color-white);
+     padding-bottom: 0.6rem;
+     font-style: italic;
+}
+
+.pass-cards h3 {
+     text-align: left;
+     padding-left: 0.4rem;
+     font-size: 0.8rem;
+     font-family: var(--font-bold);
+     color: var(--color-white);
+     border-bottom: 2px solid var(--color-blue);
+     margin-bottom: 1.1rem;
+     padding-bottom: 0.6rem;
+     font-style: italic;
+}
+
+
+.pass-card {
+     background-color: rgba(112, 179, 255, 0.8);
+     padding: 1rem;
+     padding-top: 1rem;
+     box-shadow: 10px 10px 5px rgba(134, 194, 254, 0.1);
+     max-height: 1000px;
+}
+
+
+.pass-card:hover {
+     transform: translateY(3px);
+     box-shadow: 10px 10px 5px rgba(134, 190, 254, 0.3);
+}
 
 
 
 
 .parallax-image-1 {
      background-image: url('../images/cia1.png');
+     border-bottom:  2px solid var(--color-dark-green);
 }
 
 .parallax-image-2 {
      background-image: url('../images/cia2.png');
+     border-bottom:  2px solid var(--color-blue);
 }
+
+.parallax-image-3 {
+     background-image: url('../images/aaa1.png');
+     border-bottom:  2px solid var(--color-dark-green);
+}
+
+.parallax-image-4 {
+     background-image: url('../images/attacks1.png');
+     border-bottom:  2px solid var(--color-dark-green);
+}
+
 .parallax-image {
      z-index: 0;
      background-size: cover;
@@ -462,7 +675,6 @@ header {
      font-family: var(--color-bold);
      overflow: hidden;
      padding-bottom: 4rem;
-     border-bottom:  2px solid var(--color-dark-green);;
 }
 
 .parallax-image-1::before {
@@ -477,6 +689,28 @@ header {
 }
 
 .parallax-image-2::before {
+     z-index: -100;
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: rgba(0, 46, 102, 0.55);
+}
+
+.parallax-image-3::before {
+     z-index: -100;
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: rgba(10, 102, 0, 0.55);
+}
+
+.parallax-image-4::before {
      z-index: -100;
      content: '';
      position: absolute;
