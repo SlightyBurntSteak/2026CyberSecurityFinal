@@ -14,12 +14,15 @@
      --color-blue: #00539a;
      --color-green: #37bd79;
      --color-dark-green: #1e8b55;
-     --color-light-green: #52e89d;
      --color-ltblue: #308fac;
      --color-white: #FFFFFF;
      --color-dark: #1A2B45;
-     --color-red: #BD377B;
+     --color-red: #bd4034;
      --color-yellow: #f4e604;
+
+     /* Backgrounds */
+     --bg-blue: linear-gradient(to right, #308fac, #00539a);
+     --bg-green: linear-gradient(to right, #37bd79, #1e8b55);
 
      /* Outlines */
      --outline:
@@ -84,7 +87,7 @@
 }
 
 body {
-     background-color: var(--color-green);
+     background: var(--bg-green);
      font-family: var(--font-main);
      color: var(--color-dark);
      line-height: 1.6;
@@ -199,7 +202,6 @@ header {
      align-self: flex-start;
      text-wrap: wrap;
      font-size: 1.4rem;
-     color: var(--color-gold);
      margin-bottom: 1.5rem;
      max-width: 650px;
      text-align: left;
@@ -236,7 +238,7 @@ header {
 /* CIA */
 
 .cia {
-     background-color: var(--color-green);
+     background: var(--bg-green);
      position: relative;
 }
 
@@ -323,10 +325,10 @@ header {
 
 
 .cia-card {
+     border: 4px inset var(--color-green);
      background-color: rgba(112, 255, 169, 0.8);
      padding: 1rem;
      padding-top: 1.4rem;
-     border: px solid var(--color-dark-green);
      box-shadow: 10px 10px 5px rgba(134, 254, 182, 0.1);
      max-height: 1000px;
 }
@@ -337,6 +339,7 @@ header {
 }
 
 .cia-footer {
+     border: 4px inset var(--color-green);
      background-color: rgba(112, 255, 169, 0.8);
      padding: 1rem;
      margin: 1rem 3rem;
@@ -355,7 +358,7 @@ header {
 
 .data {
      padding-top: 1rem;
-     background-color: var(--color-ltblue);
+     background: var(--bg-blue);
      position: relative;
 }
 
@@ -421,6 +424,7 @@ header {
 
 
 .data-card {
+     border: 4px inset var(--color-blue);
      background-color: rgba(112, 179, 255, 0.8);
      padding: 1rem;
      padding-top: 1.4rem;
@@ -435,6 +439,7 @@ header {
 }
 
 .data-footer {
+     border: 4px inset var(--color-blue);
      background-color: rgba(112, 179, 255, 0.8);
      padding: 2rem;
      padding-top: 1.4rem;
@@ -455,7 +460,7 @@ header {
 .aaa {
      padding-top: 1rem;
      padding-bottom: 3rem;
-     background-color: var(--color-dark-green);
+     background: var(--bg-green);
      position: relative;
 }
 
@@ -466,12 +471,14 @@ header {
 }
 
 .aaa-head h2 {
+     text-shadow: var(--outline-half-green);
      color: var(--color-dark);
      font-family: var(--font-bold);
      font-size: 2.5rem;
 }
 
 .aaa-head h3 {
+     text-shadow: var(--outline-half-green);
      color: var(--color-dark);
      font-family: var(--font-bold);
      font-size: 0.8;
@@ -514,6 +521,7 @@ header {
 
 
 .aaa-card {
+     border: 4px inset var(--color-green);
      background-color: rgba(112, 255, 169, 0.8);
      padding: 1rem;
      padding-top: 1rem;
@@ -528,6 +536,7 @@ header {
 }
 
 .aaa-footer {
+     border: 4px inset var(--color-green);
      background-color: rgba(112, 255, 169, 0.8);
      padding: 2rem;
      padding-top: 1.4rem;
@@ -564,7 +573,7 @@ header {
 
 .passwords {
      padding-top: 1rem;
-     background-color: var(--color-blue);
+     background: var(--bg-blue);
      position: relative;
 }
 
@@ -607,7 +616,7 @@ header {
 
 .pass-cards h2 {
      text-align: center;
-     font-size: 1.7rem;
+     font-size: 1.5rem;
      font-family: var(--font-bold);
      color: var(--color-white);
      padding-bottom: 0.6rem;
@@ -628,11 +637,13 @@ header {
 
 
 .pass-card {
+     border: 4px inset var(--color-blue);
      background-color: rgba(112, 179, 255, 0.8);
      padding: 1rem;
      padding-top: 1rem;
      box-shadow: 10px 10px 5px rgba(134, 194, 254, 0.1);
      max-height: 1000px;
+     font-size: 1.1rem;
 }
 
 
@@ -640,6 +651,88 @@ header {
      transform: translateY(3px);
      box-shadow: 10px 10px 5px rgba(134, 190, 254, 0.3);
 }
+
+/* Password Table */
+
+.table-top {
+     margin: 1rem 15rem auto;
+     place-items: center;
+     color: var(--color-white);
+     font-family: var(--font-main);
+}
+
+.table-top p,
+.table-top-info {
+     padding-left: 1rem;
+     border-left: 2px solid var(--color-green);
+}
+.table-top h2 {
+     margin-bottom: 0.4rem;
+     font-size: 2rem;
+     text-shadow: var(--outline-bold);
+     font-family: var(--font-bold);
+}
+
+.table-top p {
+     font-family: var(--font-bold);
+     display: flex;
+     font-size: 1.25rem;
+}
+
+.table-top-info { 
+     color: var(--color-white);  
+     margin-bottom: 1rem;
+     max-width: 400px;
+     font-size: 1rem;
+     text-wrap: none;
+     font-family: var(--font-reg);
+     text-transform: uppercase;
+}
+
+.table-top-info strong {
+     color: var(--color-green);
+}
+
+.table-top-info b {
+     color: var(--color-red);
+}
+
+.table {
+     margin: auto;
+     border-collapse: collapse;
+     margin-top: var(--spacing-sm);
+}
+
+.table th {
+     background-color: var(--color-dark);
+     color: var(--color-white);
+     font-size: 1.2rem;
+     font-family: var(--font-bold);
+}
+
+.table th, 
+.table td {
+     padding: 0.6rem 1rem;
+     text-align: center;
+}
+
+.table tr {
+     border-bottom:  1px dotted var(--color-white);
+     background-color: rgba(112, 179, 255, 0.8);
+}
+
+.table tr:nth-child(even) {
+     background-color: rgba(112, 179, 255, 0.6);
+     color: var(--color-white);
+}
+
+.table tr:hover {
+    background-color: var(--color-blue);
+    color: var(--color-white);
+}
+
+
+
 
 
 
@@ -656,12 +749,10 @@ header {
 
 .parallax-image-3 {
      background-image: url('../images/aaa1.png');
-     border-bottom:  2px solid var(--color-dark-green);
 }
 
 .parallax-image-4 {
      background-image: url('../images/attacks1.png');
-     border-bottom:  2px solid var(--color-dark-green);
 }
 
 .parallax-image {

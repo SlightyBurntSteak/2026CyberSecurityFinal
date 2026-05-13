@@ -189,37 +189,107 @@
                 <div class="parallax-image parallax-image-4">
                     <section class="pass-cards">
                             <div class="pass-card">
-                                <h2>Authentication</h2>
+                                <h2>Brute Force</h2>
                                 <h3>Method &#35;1</h3>
                                 <div class="pass-card-p">
-                                    <p>Prove who you are. Authentication is the establishment of trust between two parties. Without trust, information cannot safely be shared or accessed.</p>
+                                    <p>Software that automatically tests every possible character combination until the correct password is found. Thorough but slow for complex passwords.</p>
                                 </div>
                             </div>
 
                             <div class="pass-card">
-                                <h2>Access Control</h2>
+                                <h2>Dictonary Attack</h2>
                                 <h3>Method &#35;2</h3>
                                 <div class="pass-card-p">
-                                    <p>Access Control What are you allowed to see or reach? Also called authorization or permissions. Not every authenticated user should access everything.</p>
+                                    <p>Uses a large database of common words, names, and character substitutions (like p@ssword ) to rapidly guess passwords. Much faster than pure brute force.</p>
                                 </div>
                             </div>
 
                             <div class="pass-card">
-                                <h2>Data in Use</h2>
+                                <h2>Password Spraying</h2>
                                 <h3>Method &#35;3</h3>
                                 <div class="pass-card-p">
-                                    <p>Keep track of what happened. Also called auditing. Logs and records let us review activity, detect anomalies, and respond to incidents.</p>
+                                    <p>Tests one weak password against many accounts. Avoids account lockouts because each account only receives one incorrect attempt.</p>
                                 </div>
                             </div>
 
                             <div class="pass-card">
-                                <h2>Data in Use</h2>
+                                <h2>Credential Stuffing</h2>
                                 <h3>Method &#35;4</h3>
                                 <div class="pass-card-p">
-                                    <p>Keep track of what happened. Also called auditing. Logs and records let us review activity, detect anomalies, and respond to incidents.</p>
+                                    <p>Uses stolen username/ password pairs from a known breach to attack other sites. Effective because 52% of people reuse passwords across accounts.</p>
                                 </div>
                             </div> 
                     </section>
+            </section>
+            <section class="pass-table">
+                <div class="table-top">
+                    <h2>How Long to Brute Force Your Password?</h2>
+                    <div class="table-top-box"> 
+                        <p>Estimated crack time based on password length and character types used.</p>
+                    </div>
+                    <div class="table-top-info">
+                        <h3><b>Red</b> = cracked &rarr; <strong>Green</strong> = extremely safe</h3>
+                    </div>
+                </div>
+                <div>
+                    <table class="table">
+                    <thead>
+                    <tr>
+                        <th colspan="5">Estimated Brute Force Crack Time by Password Length & Character Set</th>
+                    </tr>
+                    <tr>
+                        <th>Skill / Tool</th>
+                        <th>Category</th>
+                        <th>Proficiency Level</th>
+                        <th>How I Used It</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>HTML5</td>
+                        <td>Web Development</td>
+                        <td>Intermediate</td>
+                        <td>Built structured, semantic web pages all year</td>
+                    </tr>
+                    <tr>
+                        <td>CSS3 / Flexbox / Grid</td>
+                        <td>Web Development</td>
+                        <td>Intermediate</td>
+                        <td>Styled responsive layouts including this portfolio</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>Programming</td>
+                        <td>Beginner–Intermediate</td>
+                        <td>DOM manipulation, events, interactive apps</td>
+                    </tr>
+                    <tr>
+                        <td>GitHub / Git</td>
+                        <td>Version Control</td>
+                        <td>Beginner</td>
+                        <td>Committed code and deployed projects via GitHub Pages</td>
+                    </tr>
+                    <tr>
+                        <td>GitHub Codespaces</td>
+                        <td>Development Tools</td>
+                        <td>Intermediate</td>
+                        <td>Primary coding environment all year</td>
+                    </tr>
+                    <tr>
+                        <td>Adobe Photoshop</td>
+                        <td>Design / Media</td>
+                        <td>Beginner</td>
+                        <td>Optimized images for web use</td>
+                    </tr>
+                    <tr>
+                        <td>jQuery</td>
+                        <td>JavaScript Library</td>
+                        <td>Beginner</td>
+                        <td>Added animations and simplified DOM manipulation</td>
+                    </tr>
+                    </tbody>
+                </table>
+                </div>
             </section>
         </section>
     </main>
