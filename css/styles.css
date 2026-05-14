@@ -13,12 +13,19 @@
      /* Colors */ 
      --color-blue: #00539a;
      --color-green: #37bd79;
-     --color-dark-green: #1e8b55;
+     --color-light-green:rgb(102, 206, 154);
+     --color-ever-so-diffrent-green: #42a071;
+     --color-dark-green: #1d8e55;
      --color-ltblue: #308fac;
      --color-white: #FFFFFF;
+     --color-gray: #97a0b3;
+     --color-gray2: #91a2bb;
+     --color-gray3: #4b516a;
      --color-dark: #1A2B45;
-     --color-red: #bd4034;
-     --color-yellow: #f4e604;
+     --color-darkish: #25426c;
+     --color-red: #f25042;
+     --color-orange: #ffda73;
+     --color-yellow: #f7ef88;
 
      /* Backgrounds */
      --bg-blue: linear-gradient(to right, #308fac, #00539a);
@@ -44,10 +51,10 @@
      2px  2px 0 #000;
 
      --outline-white:
-    -2px -2px 0 #FFFFFF,  
-     2px -2px 0 #FFFFFF,
-    -2px  2px 0 #FFFFFF,
-     2px  2px 0 #FFFFFF;
+    -1px -1px 0 #FFFFFF,  
+     1px -1px 0 #FFFFFF,
+    -1px  1px 0 #FFFFFF,
+     1px  1px 0 #FFFFFF;
 
       --outline-half-white:
     -0px -0px 0 #ffffff,  
@@ -655,7 +662,7 @@ header {
 /* Password Table */
 
 .table-top {
-     margin: 1rem 15rem auto;
+     margin: 1rem 9rem auto;
      place-items: center;
      color: var(--color-white);
      font-family: var(--font-main);
@@ -698,38 +705,113 @@ header {
 }
 
 .table {
+     border: 4px inset var(--color-dark);
      margin: auto;
      border-collapse: collapse;
      margin-top: var(--spacing-sm);
+     margin-bottom: 1rem;
 }
 
-.table th {
-     background-color: var(--color-dark);
-     color: var(--color-white);
-     font-size: 1.2rem;
-     font-family: var(--font-bold);
-}
 
 .table th, 
 .table td {
-     padding: 0.6rem 1rem;
+     font-family: var(--font-bold);
+     padding: 0.6rem 2rem;
      text-align: center;
+     font-size: 1rem;
 }
 
-.table tr {
-     border-bottom:  1px dotted var(--color-white);
-     background-color: rgba(112, 179, 255, 0.8);
+.table td {
+     text-shadow: 1px 1px 2px var(--color-dark);
 }
 
-.table tr:nth-child(even) {
-     background-color: rgba(112, 179, 255, 0.6);
+.table th {
+     color: var(--color-white);
+     font-size: 0.8rem;
+     font-family: var(--font-bold);
+     background-color: var(--color-darkish);
+     padding-bottom: 0.4rem;
+}
+
+table tr.small {
+     color: var(--color-white);
+     font-size: 0.2rem;
+     font-family: var(--font-bold);
+     background-color: var(--color-darkish);
+     border-bottom: 2px double var(--color-white);
+}
+
+table .table-head {
+     background-color: var(--color-dark);
+     padding: 0.2 0.4rem;
+     font-size: 1.2rem;
+}
+
+table td.table-char {
+     font-family: var(--font-reg);
+     font-size: 1.2rem;
+     background-color: var(--color-darkish);
      color: var(--color-white);
 }
 
+
+.table tbody tr {
+     text-rendering: optimizeLegibility;
+     border-bottom:  1px dashed var(--color-blue);
+     background-color: var(--color-gray2);
+}
+
+.table tr:nth-child(even) {
+     background-color: var(--color-gray);
+}
+
+table td.color-red {
+     color:var(--color-red);
+}
+
+table td.color-orange {
+     color:var(--color-orange);
+}
+
+table td.color-yellow {
+     color:var(--color-yellow);
+}
+
+table td.color-green {
+     color:var(--color-light-green);
+     text-shadow: 1px 1px 1px var(--color-dark);
+}
+
+table td.color-dark-green {
+     /* text-shadow: var(--outline-white); */
+     color:var(--color-ever-so-diffrent-green);
+     text-shadow: 1px 1px 2px var(--color-dark);
+}
+
+
+
 .table tr:hover {
-    background-color: var(--color-blue);
+    background-color: rgba(112, 179, 255, 0.8);
     color: var(--color-white);
 }
+
+.password-footer {
+     border: 4px inset var(--color-blue);
+     background-color: var(--color-darkish);
+     padding: 2rem;
+     padding-top: 1.4rem;
+     box-shadow: 10px 10px 5px rgba(134, 194, 254, 0.1);
+     max-height: 1000px;
+     margin: 2rem 6rem;
+     font-size: 1.1rem;
+     color: var(--color-white);
+}
+
+.password-footer strong {
+     font-size: 1.4rem;
+     font-family: var(--font-reg);
+}
+
 
 
 
