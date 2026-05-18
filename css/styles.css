@@ -271,7 +271,8 @@ header {
 }
 
 .cia-head p {
-     font-family: var(--font-main);
+     font-size: 1.2rem;
+     font-family: var(--font-reg);
      padding-left: 1rem;
      border-left: 2px solid var(--color-blue);
      max-width: 800px;
@@ -332,6 +333,7 @@ header {
 
 
 .cia-card {
+     font-family: var(--font-bold);
      border: 4px inset var(--color-green);
      background-color: rgba(112, 255, 169, 0.8);
      padding: 1rem;
@@ -340,6 +342,7 @@ header {
      max-height: 1000px;
 }
 
+
 .cia-card:hover {
      transform: translateY(3px);
      box-shadow: 10px 10px 5px rgba(134, 254, 182, 0.3);
@@ -347,6 +350,7 @@ header {
 
 .cia-footer {
      border: 4px inset var(--color-green);
+     font-family: var(--font-bold);
      background-color: rgba(112, 255, 169, 0.8);
      padding: 1rem;
      margin: 1rem 3rem;
@@ -355,7 +359,7 @@ header {
 }
 
 .cia-footer strong {
-     font-size: 1.5rem;
+     font-size: 1.8rem;
      font-family: var(--font-reg);
 }
 
@@ -390,13 +394,13 @@ header {
 }
 
 .data-head p {
-     font-family: var(--font-main);
+     font-size: 1.2rem;
+     font-family: var(--font-reg);
      padding-left: 1rem;
      color: var(--color-white);
      border-left: 2px solid var(--color-green);
      max-width: 800px;
 }
-
 .data-cards {
      gap: 1rem;
      margin: 3rem 3rem;
@@ -415,6 +419,26 @@ header {
      font-style: italic;
 }
 
+
+
+
+.data-card {
+     border: 4px inset var(--color-blue);
+     background-color: rgba(112, 179, 255, 0.8);
+     padding: 1rem;
+     padding-top: 1.4rem;
+     box-shadow: 10px 10px 5px rgba(134, 194, 254, 0.1);
+     max-height: 1000px;
+     font-family: var(--font-bold);
+}
+
+
+.data-card:hover {
+     transform: translateY(3px);
+     box-shadow: 10px 10px 5px rgba(134, 194, 254, 0.3);
+}
+
+
 .data-card-ex {
      font-size: 1.3rem;
      margin-top: 0.4rem;
@@ -429,22 +453,6 @@ header {
      background-color: rgba(60, 161, 255, 0.5);
 }
 
-
-.data-card {
-     border: 4px inset var(--color-blue);
-     background-color: rgba(112, 179, 255, 0.8);
-     padding: 1rem;
-     padding-top: 1.4rem;
-     box-shadow: 10px 10px 5px rgba(134, 194, 254, 0.1);
-     max-height: 1000px;
-}
-
-
-.data-card:hover {
-     transform: translateY(3px);
-     box-shadow: 10px 10px 5px rgba(134, 194, 254, 0.3);
-}
-
 .data-footer {
      border: 4px inset var(--color-blue);
      background-color: rgba(112, 179, 255, 0.8);
@@ -455,11 +463,12 @@ header {
      margin: 3rem;
      font-size: 1.1rem;
      color: var(--color-dark);
+     font-family: var(--font-bold);
 }
 
 .data-footer strong {
      font-size: 1.2rem;
-     font-family: var(--font-reg);
+     color: var(--color-blue);
 }
 
 /* aaa */
@@ -492,12 +501,12 @@ header {
 }
 
 .aaa-head p {
-     font-family: var(--font-main);
+     font-size: 1.2rem;
+     font-family: var(--font-reg);
      padding-left: 1rem;
      color: var(--color-dark);
      border-left: 2px solid var(--color-blue);
      max-width: 500px;
-     font-size: 1.2rem;
 }
 
 
@@ -534,6 +543,10 @@ header {
      padding-top: 1rem;
      box-shadow: 10px 10px 5px rgba(134, 194, 254, 0.1);
      max-height: 1000px;
+}
+
+.aaa-card p {
+     font-family: var(--font-bold);
 }
 
 
@@ -605,11 +618,15 @@ header {
 }
 
 .pass-attacks .pass-head p {
-     font-family: var(--font-main);
      padding-left: 1rem;
      color: var(--color-white);
      border-left: 2px solid var(--color-green);
      max-width: 800px;
+}
+
+.pass-head p {
+     font-size: 1.2rem;
+     font-family: var(--font-reg);
 }
 
 
@@ -653,6 +670,9 @@ header {
      font-size: 1.1rem;
 }
 
+.pass-card p {
+     font-family: var(--font-bold);
+}
 
 .pass-card:hover {
      transform: translateY(3px);
@@ -806,7 +826,8 @@ table td.color-dark-green {
      box-shadow: 10px 10px 5px rgba(134, 194, 254, 0.1);
      max-height: 1000px;
      margin: 2rem 6rem;
-     font-size: 1.1rem;
+     font-size: 1rem;
+     font-family: var(--font-bold);
      color: var(--color-white);
 }
 
@@ -850,7 +871,8 @@ table td.color-dark-green {
 }
 
 .hash-head p {
-     font-family: var(--font-main);
+     font-size: 1.2rem;
+     font-family: var(--font-reg);
      padding-left: 1rem;
      color: var(--color-dark);
      border-left: 2px solid var(--color-blue);
@@ -859,8 +881,9 @@ table td.color-dark-green {
 }
 
 .hash-process {
-     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
      display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+     gap: 1rem;
      justify-content: space-evenly;
      padding: 1rem;
      margin: 0rem 3rem;
@@ -869,30 +892,42 @@ table td.color-dark-green {
      background-color: rgba(112, 255, 169, 0.4);
 }
 
+
 .hash-process h3 {
+     margin: 0.1rem;
      display: flex;
      align-items: center;
      justify-content: center;
      font-size: 2rem;
 }
 
+.invisible {
+     color: rgba(0, 0, 0, 0);
+}
+
 .hash-proc-1,
 .hash-proc-2,
 .hash-proc-3,
 .hash-proc-4 {
+     text-wrap: nowrap;
      display: flex;
      align-items: center;
-     min-height: 100px;
+     min-height: 80px;
+     min-width: 200px;
      font-family: var(--font-bold);
      font-size: 1rem;
-     padding: 0.6rem 1rem;
-     border-radius: 0.3rem;
-     background-color: rgba(113, 206, 150, 0.8);
+     justify-content: space-around;
 }
 
 .hash-process p {
      align-items: center;
+     border-radius: 0.3rem;
+     padding: 0.6rem 0.8rem;
+     min-height: 80px;
+     min-width: 200px;
+     background-color: rgba(113, 206, 150, 0.8);
 }
+
 
 
 
@@ -936,6 +971,10 @@ table td.color-dark-green {
      max-height: 1000px;
 }
 
+.hash-card p {
+     font-family: var(--font-bold);
+}
+
 
 .hash-card:hover {
      transform: translateY(3px);
@@ -949,11 +988,10 @@ table td.color-dark-green {
      padding-top: 1.4rem;
      box-shadow: 10px 10px 5px rgba(134, 194, 254, 0.1);
      max-height: 1000px;
-     margin: 3rem;
-     margin-left: 5rem;
-     margin-right: 5rem;
+     margin: 0rem 3rem;
      color: var(--color-dark);
-     margin-bottom: 0rem;
+     font-size: 1rem;
+     font-family: var(--font-bold);
 }
 
 .hash-footer h2 {
@@ -963,17 +1001,168 @@ table td.color-dark-green {
      margin-bottom: 0.5rem;
 }
 
-.hash-footer h2 strong {
-     padding-right: 0.6rem;
-     font-size: 2.5rem;
-     font-family: var(--font-loud);
+.hash-footer strong {
+     font-size: 1.1rem;
 }
 
-.hash-footer ul {
+
+/* Authentication */
+
+
+.authentication {
+     background: var(--bg-blue);
+     position: relative;
+}
+
+.au-head {
+     border-top: 2px dotted var(--color-dark);
+     padding: 1rem 7rem;
+     margin-top: 1rem;
+     text-align: left;
+}
+
+.au-head h2 {
+     text-shadow: var(--outline-bold);
+     color: var(--color-white);
+     font-family: var(--font-bold);
+     font-size: 2.5rem;
+}
+
+.au-head h3 {
+     text-shadow: var(--outline-bold);
+     color: var(--color-white);
+     font-family: var(--font-bold);
+     font-size: 0.8;
+}
+
+.au-head p {
+     font-size: 1.2rem;
      font-family: var(--font-reg);
-     margin-left: 1rem;
+     color: var(--color-white);
+     padding-left: 1rem;
+     border-left: 2px solid var(--color-light-green);
+     max-width: 800px;
+}
+
+.au-cards {
+     gap: 1rem;
+     margin: 3rem 3rem;
+     margin-bottom: 0rem;
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.au-cards h2 {
+     text-align: center;
+     font-size: 1.5rem;
+     font-family: var(--font-bold);
+     color: var(--color-white);
+     padding-bottom: 0.6rem;
+     font-style: italic;
+}
+
+.au-cards h3 {
+     text-align: left;
+     padding-left: 0.4rem;
+     font-size: 0.8rem;
+     font-family: var(--font-bold);
+     color: var(--color-white);
+     border-bottom: 2px solid var(--color-blue);
+     margin-bottom: 1.1rem;
+     padding-bottom: 0.6rem;
+     font-style: italic;
+}
+
+
+.au-card {
+     border: 4px inset var(--color-blue);
+     background-color: rgba(112, 179, 255, 0.8);
+     padding: 1rem;
+     padding-top: 1rem;
+     box-shadow: 10px 10px 5px rgba(134, 194, 254, 0.1);
+     max-height: 1000px;
+}
+
+.au-card p {
+     font-family: var(--font-bold);
+}
+
+
+.au-card:hover {
+     transform: translateY(3px);
+     box-shadow: 10px 10px 5px rgba(134, 190, 254, 0.3);
+}
+
+.au-3-ways {
+     border: 4px inset var(--color-blue);
+     background-color: var(--color-darkish);
+     padding: 2rem;
+     padding-top: 1.4rem;
+     box-shadow: 10px 10px 5px rgba(134, 194, 254, 0.1);
+     max-height: 1000px;
+     margin: 3rem;
+     font-size: 1.1rem;
+     color: var(--color-white);
+}
+
+.au-3-ways h3 {
+     font-size: 1.5rem;
+     font-family: var(--font-bold);
+}
+
+.au-3-lists {
+     gap: 1rem;
+     margin: 3rem 1rem;
+     margin-bottom: 0rem;
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.au-3-list {
+     padding: 1rem 1.2rem;
+     border: 4px inset var(--color-blue);
+}
+
+.au-3-list h4 {
+     font-family: var(--font-bold);
+     margin-bottom: 0.4rem;
+}
+
+.au-3-list p {
+     font-size: 0.9rem;
+     font-family: var(--font-bold);
+}
+
+
+
+
+
+
+.au-footer {
+     border: 4px inset var(--color-blue);
+     background-color: rgba(112, 179, 255, 0.6);
+     padding: 2rem;
+     padding-top: 1.4rem;
+     box-shadow: 10px 10px 5px rgba(134, 194, 254, 0.1);
+     max-height: 1000px;
+     margin: 3rem;
+     font-size: 1rem;
+     font-family: var(--font-bold);
+     color: var(--color-dark);
+}
+
+.au-footer strong {
      font-size: 1.2rem;
 }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1003,6 +1192,15 @@ table td.color-dark-green {
 
 .parallax-image-5 {
      background-image: url('../images/hash1.png');
+}
+
+.parallax-image-6 {
+     background-image: url('../images/auth1.png');
+}
+
+.parallax-image-6-half {
+     background-image: url('../images/auth1.png');
+     border-top: 2px solid var(--color-blue);
 }
 
 .parallax-image {
@@ -1082,4 +1280,26 @@ table td.color-dark-green {
      width: 100%;
      height: 100%;
      background: rgba(9, 66, 2, 0.65);
+}
+
+.parallax-image-6::before {
+     z-index: -100;
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: rgba(0, 46, 102, 0.55);
+}
+
+.parallax-image-6-half::before {
+     z-index: -100;
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: rgba(0, 46, 102, 0.75);
 }

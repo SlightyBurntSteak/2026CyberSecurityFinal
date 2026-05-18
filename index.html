@@ -342,7 +342,7 @@
                 </div>
             </section>
         </section>
-        <section class="hashing">
+        <section class="hashing" id="hashing">
              <div class="hash-head">
                 <h3>Password Storage</h3>
                 <h2>Password Hashing & Salting</h2>
@@ -352,18 +352,19 @@
                 <div class="hash-process">
                     <div class="hash-proc-1">
                         <p>Pa$$word123</p>
+                        <h3>&rarr;</h3>
                     </div>
-                    <h3>&rarr;</h3>
                     <div class="hash-proc-2">
                         <p>SHA-256 <br> Algorithm</p>
+                        <h3>&rarr;</h3>
                     </div>
-                    <h3>&rarr;</h3>
                     <div class="hash-proc-3">
                         <p> e52cac6741 <br> 9a9a5f4dcc <br> 3b5aa765d6...</p>
+                        <h3>&rarr;</h3>
                     </div>
-                    <h3>&rarr;</h3>
                     <div class="hash-proc-4">
                         <p>Hashes MATCH &#10003; <br> ACCESS GRANTED</p>
+                        <h3 class="invisible">&rarr;</h3>
                     </div>
                 </div>
                 <div class="parallax-image parallax-image-5">
@@ -402,14 +403,113 @@
                     </section>
                 </div>
                 <section class="hash-footer">
-                    <h2><strong>3</strong> ways to Authenticate:</h2>
-                    <ul>
-                        <li>Something you know (password or PIN)</li>
-                        <li>Something you have (smart card, hardware token, code sent to your phone)</li>
-                        <li>Something you are (fingerprint, retina scan, voice)</li>
-                    </ul>
+                    <h2>Where Are Passwords Stored?</h2>
+                    <p><strong>On Windows:</strong> in the SAM registry hive. | <strong>On Linux:</strong> in /etc/shadow (root access only). <br> The older /etc/passwd file is world-readable and not safe for passwords.</p>
                 </section>
             </div>
+        </section>
+        <section class="authentication" id="authentication">
+             <div class="au-head">
+                <h3>Beyond Passwords</h3>
+                <h2>Methods of Authentication</h2>
+                <p>Modern security goes far beyond passwords. Here are the key authentication methods used in real-world systems — and how combining them creates much stronger protection.</p>
+            </div>
+            <div class="cia-body parallax-image parallax-image-6">
+                <section class="au-cards">
+
+                    <div class="au-card">
+                        <h2>Smart Cards</h2>
+                        <h3>SOMETHING YOU HAVE</h3>
+                        <div class="au-card-p">
+                            <p>Cards with an embedded chip automatically recognized by an authenticating device. Proximity readers can detect them in a pocket or purse without physical contact.</p>
+                        </div>
+                    </div>
+
+
+                    <div class="au-card">
+                        <h2>Digital Certificates</h2>
+                        <h3>SOMETHING YOU HAVE</h3>
+                        <div class="au-card-p">
+                            <p> Servers use certificates to authenticate with browsers (the @ padlock in your address bar). Issued by trusted third-party Certificate Authorities (CAs).</p>
+                        </div>
+                    </div>
+
+
+                    <div class="au-card">
+                        <h2>Biometrics</h2>
+                        <h3>SOMETHING YOU ARE</h3>
+                        <div class="au-card-p">
+                            <p>Uses measurable physical characteristics: fingerprint, retina scan, voice, or even typing speed. Disney World uses finger biometrics for multi-day pass verification. </p>
+                        </div>
+                    </div>
+
+
+                    <div class="au-card">
+                        <h2>Hardware Tokens &lpar;OTP&rpar;</h2>
+                        <h3>SOMETHING YOU HAVE</h3>
+                        <div class="au-card-p">
+                            <p>A physical device generates a new One-Time Password &lpar;OTP&rpar; every 60 seconds. Since each OTP is used exactly once, intercepting it is useless to an attacker.</p>
+                        </div>
+                    </div>
+
+                    <div class="au-card">
+                        <h2>Two-Factor Auth &lpar;2FA&rpar;</h2>
+                        <h3>KNOW + HAVE</h3>
+                        <div class="au-card-p">
+                            <p>Combines two factors - such as a password plus a PIN sent to your phone &lpar;like Google 2- Step Verification&rpar;. One stolen factor alone is useless.</p>
+                        </div>
+                    </div>
+
+                    <div class="au-card">
+                        <h2>Multi-Factor Auth &lpar;MFA&rpar;</h2>
+                        <h3>TWO OR MORE FACTORS</h3>
+                        <div class="au-card-p">
+                            <p>Uses two or more different authentication factors. The gold standard for account security - combining know, have, and/or are dramatically reduces breach risk.</p>
+                        </div>
+                    </div>
+
+
+                    <div class="au-card">
+                        <h2>Single Sign-On &lpar;SSO&rpar;</h2>
+                        <h3>ONE LOGIN, MANY RESOURCES</h3>
+                        <div class="au-card-p">
+                            <p>One authentication grants access to many servers or services. Used widely in schools and businesses to reduce password fatigue while maintaining security.</p>
+                        </div>
+                    </div>
+
+
+                    <div class="au-card">
+                        <h2>Passphrases</h2>
+                        <h3>SOMETHING YOU KNOW</h3>
+                        <div class="au-card-p">
+                            <p>A string of multiple words offers more security than a complex password and is easier to remember. Example: "The 3 little pigs say do not forget the bacon!"</p>
+                        </div>
+                    </div>
+
+
+                </section>
+            </div>
+            <div class="parallax-image parallax-image-6-half">
+            <div class="au-3-ways">
+                <h3>Top 3 Ways To Stop Password Attacks</h3>
+                <div class="au-3-lists">
+                    <div class="au-3-list">
+                        <h4>#1 - Use Strong Passwords</h4>
+                        <p>Long passwords with mixed characters won't be in a dictionary and take too long to crack. 12+ characters, all character types.</p>
+                    </div>
+                    <div class="au-3-list">
+                        <h4>#2 - Enable Account Lockout </h4>
+                        <p>Lock accounts after 3-5 failed attempts. This stops all automated brute force, dictionary, and spraying attacks cold.</p>
+                    </div>
+                    <div class="au-3-list">
+                        <h4>#3 - Enable MFA / 2FA</h4>
+                        <p>Even if a password is stolen, an attacker still cannot log in without your second factor. Enable it everywhere you can.</p>
+                    </div>
+                </div>
+            </div>
+            <section class="au-footer">
+                <p><strong>Useful Resources:</strong> Check if your credentials have been exposed at <a href="https://HavelBeenPwned.com" target="_blank">HavelBeenPwned.com</a> • Learn more about the NIST Cybersecurity Framework at <a href="https://nist.gov/cyberframework" target="_blank">nist.gov/cyberframework</a></p>
+            </section>
         </section>
     </main>
 </body>
