@@ -103,27 +103,31 @@ body {
 /* NAV BAR */
 /* Later for phones, make it so the logo is on top and links are below it*/
 header {
-     border: 2px solid var(--color-ltblue);
-     background-color: rgba(0, 92, 184, 0.75);
+     border-bottom: 2px solid var(--color-blue);
      position: sticky;
      top: 0;
      left: 0;
      z-index: 100;
-     border-radius: 0.3rem;
+     border-radius: 0.1rem;
 }
 
 .main-nav {
+     background: linear-gradient(to right, rgba(42, 60, 199, 0.6), rgba(25, 36, 118, 0.8));
+     flex-wrap: nowrap;      
+     width: 100%; 
+     overflow-x: auto;
      display: flex;
      justify-content: space-between; /* Logo Left, nav right */
      align-items: center; /* vertically centered */
-     padding: 1rem 2rem;
+     padding: 1rem 1.5rem;
      max-width: 1500px;
      margin: 0 auto;
      font-family: var(--font-bold);
 }
 
 .nav-logo {
-     font-size: 1.3rem;
+     font-size: 1.1rem;
+     margin-right: 1rem;
      font-weight: bold;
      color: var(--color-white);
      text-decoration: none;
@@ -133,21 +137,31 @@ header {
 .nav-links {
      list-style: none;
      display: flex;
+     align-items: center;
      justify-content: space-evenly;
-     gap: 3rem; /* Change for phones later */
+     gap: 1.5rem; 
      margin-left: 0.4rem;
 }
 
+.nav-links li {
+     border-left:  4px dotted var(--color-gray);
+     padding-left: 1.1rem;
+}
+
 .nav-links a {
+     display: flex;
      color: var(--color-white);
      text-shadow: var(--outline);
      text-decoration: none;
-     font-size: 1rem;
+     font-size: 0.85rem;
+     text-align: center;
+     justify-content: center;
      transition: color 0.2s;
+     min-height: 40px;
 }
 
 .nav-links a:hover {
-     font-size: 1.01rem;
+     font-size: 0.86rem;
      color: var(--color-ltblue);
 }
 
@@ -726,13 +740,16 @@ header {
      border-collapse: collapse;
      margin-top: var(--spacing-sm);
      margin-bottom: 1rem;
+     display: block;     
+}
+
+.table {
      overflow-x: auto;
      display: block;     
      position: sticky;   
      flex-wrap: nowrap;      
      width: 100%; 
 }
-
 
 .table th, 
 .table td {
@@ -763,12 +780,10 @@ table tr.small {
 }
 
 table .table-head {
-     position: sticky;
      background-color: var(--color-dark);
      padding: 0.4rem 0.4rem;
      font-size: 0.8rem;
 }
-
 table td.table-char {
      font-family: var(--font-reg);
      font-size: 1rem;
@@ -823,11 +838,12 @@ table td.color-dark-green {
 .password-footer {
      border: 4px inset var(--color-blue);
      background-color: var(--color-darkish);
-     padding: 2rem;
+     padding: 0rem 2rem;
      padding-top: 1.4rem;
      box-shadow: 10px 10px 5px rgba(134, 194, 254, 0.1);
      max-height: 1000px;
-     margin: 1rem 0.5rem;
+     margin: 0rem 0.5rem;
+     margin-top: 1rem;
      /*margin: 2rem 6rem;*/
      font-size: 1rem;
      font-family: var(--font-bold);
@@ -848,7 +864,6 @@ table td.color-dark-green {
 
 .hash {
      padding-top: 1rem;
-     padding-bottom: 3rem;
      background: var(--bg-green);
      position: relative;
 }
@@ -856,6 +871,7 @@ table td.color-dark-green {
 .hash-head {
      padding: 1rem 3rem;
      text-align: left;
+     margin-top: 1rem;
      border-top: 2px dotted var(--color-dark);
 }
 
@@ -889,8 +905,8 @@ table td.color-dark-green {
      gap: 1rem;
      justify-content: space-evenly;
      padding: 1rem;
-     margin: 0rem 3rem;
-     margin-top: 3rem;
+     margin: 0rem 1rem;
+     margin-top: 1rem;
      border: 4px inset var(--color-dark-green);
      background-color: rgba(112, 255, 169, 0.4);
 }
@@ -898,7 +914,6 @@ table td.color-dark-green {
 
 .hash-process h3 {
      margin: 0.1rem;
-     display: flex;
      align-items: center;
      justify-content: center;
      font-size: 2rem;
@@ -987,7 +1002,7 @@ table td.color-dark-green {
 .hash-footer {
      border: 4px inset var(--color-green);
      background-color: rgba(112, 255, 169, 0.8);
-     padding: 2rem;
+     padding: 0rem 2rem;
      padding-top: 1.4rem;
      box-shadow: 10px 10px 5px rgba(134, 194, 254, 0.1);
      max-height: 1000px;
@@ -1103,7 +1118,7 @@ table td.color-dark-green {
      padding-top: 1.4rem;
      box-shadow: 10px 10px 5px rgba(134, 194, 254, 0.1);
      max-height: 1000px;
-     margin: 1rem 0.5rem;
+     margin: 1rem 0rem;
      font-size: 1.1rem;
      color: var(--color-white);
 }
@@ -1121,8 +1136,8 @@ table td.color-dark-green {
 }
 
 .au-3-list {
-     max-width: 250px;
-     padding: 1rem 1.2rem;
+     max-width: 300px;
+     padding: 1rem 1rem;
      border: 4px inset var(--color-blue);
 }
 
@@ -1312,9 +1327,28 @@ table td.color-dark-green {
 }
 
 @media screen and (min-width: 400px) {
+     .main-nav {
+          padding: 1rem 2rem;
+     }
+     .nav-links a:hover {
+          font-size: 0.91rem;
+     }
+     .nav-logo {
+          font-size: 1.2rem;
+     }
+     .nav-links {
+          gap: 2rem;
+     }
+     .nav-links a {
+          font-size: 0.9rem;
+     }
+
      .hero-content p {
           font-size: 1.4rem;
           max-width: 600px;
+     }
+     .hero-content h1 {
+          font-size: 2.5rem;
      }
 
      .hero-block {
@@ -1363,6 +1397,26 @@ table td.color-dark-green {
 
 
 @media screen and (min-width: 768px) {
+     .main-nav {
+          padding: 1rem 2rem;
+          padding-top: 1.5rem;
+     }
+     .nav-links a:hover {
+          font-size: 1.01rem;
+     }
+     .nav-logo {
+          font-size: 1.3rem;
+     }
+     .nav-links {
+          gap: 2.5rem;
+     }
+     .nav-links a {
+          font-size: 1rem;
+     }
+     .nav-links li {
+          border-left:  0px dotted var(--color-ltblue);
+          padding-left: 0rem;
+     }
      .data-head, .cia-head, .aaa-head, .pass-head, .hash-head, .au-head {
           padding: 1rem 7rem;
      }
@@ -1450,6 +1504,19 @@ table td.color-dark-green {
 
      table .table-head {
      font-size: 1.4rem;
+     }
+
+     .hash-process {
+          margin: 0rem 3rem;
+          margin-top: 3rem;
+     }
+
+     .hash-process h3 {
+     margin: 0.1rem;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-size: 2rem;
 }
 
 
