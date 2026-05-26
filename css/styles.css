@@ -32,6 +32,7 @@
      --bg-blue: linear-gradient(to right, #308fac, #00539a);
      --bg-green: linear-gradient(to right, #37bd79, #1e8b55);
      --bg-darkish: linear-gradient(to right, #25426c, #1a3357);
+     --bg-dark: linear-gradient(to right, #1A2B45, #102644);
 
      /* Outlines */
      --outline:
@@ -100,6 +101,7 @@ body {
      font-family: var(--font-main);
      color: var(--color-dark);
      line-height: 1.6;
+     overflow: none;
 }
 
 /* NAV BAR */
@@ -122,7 +124,6 @@ header {
      justify-content: space-between; /* Logo Left, nav right */
      align-items: center; /* vertically centered */
      padding: 1rem 1.5rem;
-     max-width: 1500px;
      margin: 0 auto;
      font-family: var(--font-bold);
 }
@@ -1131,6 +1132,7 @@ table td.color-dark-green {
 }
 
 .au-3-lists {
+     min-width: 200px;
      gap: 1rem;
      margin: 2rem 0rem;
      display: grid;
@@ -1183,12 +1185,12 @@ table td.color-dark-green {
 .contact {
      background: var(--bg-darkish);
      position: relative;
+     padding-bottom: 1rem;
 }
 
 .con-head {
      border-top: 2px dotted var(--color-dark);
      padding: 1rem 3rem;
-     margin-top: 1rem;
      text-align: left;
 }
 
@@ -1216,10 +1218,10 @@ table td.color-dark-green {
 .con-form {
      border: 4px inset var(--color-dark);
      background-color: var(--color-darkish2);
-     overflow: hidden;
+     overflow: auto;
      display: block;
      color: white;
-     padding: 1rem;
+     padding: 1rem 0.5rem;
      margin: 0.5rem 0.5rem;
 }
 
@@ -1242,7 +1244,7 @@ table td.color-dark-green {
      color: var(--color-dark);
      padding: 1rem 1rem;
      margin: 1rem 0rem;
-     width: 12rem;
+     width: 8rem;
      font-family: var(--font-reg);
 }
 
@@ -1279,8 +1281,8 @@ table td.color-dark-green {
      border: 4px inset var(--color-blue);
      padding: 1rem 1rem;
      margin: 1rem 0rem;
-     max-width: 25rem;
-     min-width: 20rem;
+     max-width: 17rem;
+     min-width: 10rem;
      font-family: var(--font-reg);
 }
 
@@ -1303,7 +1305,7 @@ table td.color-dark-green {
      border: 4px inset var(--color-blue);
      padding: 1rem 1rem;
      margin: 1rem 0rem;
-     width: 25rem;
+     width: 17rem;
      font-size: 0.9rem;
      font-family: var(--font-bold);
 }
@@ -1317,6 +1319,57 @@ table td.color-dark-green {
      font-size: 1.05rem;
      padding: 1rem 1.6rem;
 }
+
+/* Footer */
+.footer {
+     background: var(--bg-dark);
+     padding: 0.2rem;
+     padding-bottom: 1rem;
+     overflow: hidden;
+}
+
+.footer-cards {
+     gap: 1rem;
+     margin: 0rem 0.5rem;
+     margin-top: 1rem;
+     padding: 1rem, 0.5rem;
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.footer-cards h2 {
+     padding-bottom: 0.6rem;
+     font-size: 1.1rem;
+     margin-top: 0.4rem;
+     font-family: var(--font-bold);
+     color: var(--color-white);
+}
+
+.footer-cards p {
+     max-width: 300px;
+     padding-bottom: 0.2rem;
+     font-family: var(--font-reg);
+     color: var(--color-gray);
+}
+
+.footer-cards a {
+     font-family: var(--font-reg);
+     color: var(--color-ltblue);
+     text-decoration: none;
+}
+
+.footer-card {
+     max-height: 1000px;
+}
+
+.footer-links {
+     list-style: none;
+     display: flex;
+     align-items: center;
+     gap: 0.5rem; 
+}
+
+
 
 
 
@@ -1531,6 +1584,16 @@ table td.color-dark-green {
      font-size: 1rem;
 }
 
+     .con-form {
+          max-width: 5 00px;
+          margin: 0rem 1rem;
+     }
+
+     .question-box textarea {
+          min-width: 15rem;
+          max-width: 30rem;
+     }
+
 
      .parallax-image {
           background-attachment: fixed;
@@ -1573,6 +1636,10 @@ table td.color-dark-green {
 
      .data-cards, .cia-cards, .aaa-cards, .pass-cards, .hash-cards, .au-cards {
           margin: 3rem 3rem;
+     }
+
+     .footer-cards {
+          margin: 0rem 3rem;
      }
 
      .cia-footer, .data-footer, .aaa-footer, .hash-footer, .au-footer {
@@ -1688,6 +1755,15 @@ table td.color-dark-green {
      .topic-box select {
           margin: 1rem;
           width: 33rem;
+     }
+
+     .footer-cards {
+          padding: 1rem 2rem;
+     }
+
+     .footer {
+          padding: 1rem;
+          padding-bottom: 0rem;
      }
 
 
